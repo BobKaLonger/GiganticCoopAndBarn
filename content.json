@@ -1,0 +1,931 @@
+{
+    "Format": "2.9.0",
+    
+    "ConfigSchema": {
+
+        "Giga Barn Upgrade": {
+            "AllowValues": "Mega, Vanilla",
+            "Description": "Choose which barn to upgrade.",
+            "Default": "Mega",
+            "Section": "Upgrade Path"
+        },
+        "Giga Coop Upgrade": {
+            "AllowValues": "Giant, Mega, Vanilla",
+            "Description": "Choose which coop to upgrade.",
+            "Default": "Mega",
+            "Section": "Upgrade Path"
+        },
+
+        "Barn Floor": {
+            "AllowValues": "Clean, Cozy",
+            "Description": "Choose the flooring for your barn.",
+            "Default": "Clean",
+            "Section": "Flooring Options"
+        },
+        "Coop Floor": {
+            "AllowValues": "Clean, Cozy",
+            "Description": "Choose the flooring for your coop.",
+            "Default": "Clean",
+            "Section": "Flooring Options"
+        }    
+    },
+
+    "CustomLocations": [
+        {
+            "Name": "bobkalonger.gigacoopnbarn_cleanBarn5",
+            "FromMapFile": "assets/cleanBarn5.tmx",
+            "When": {
+                "Barn Floor": "Clean"
+            }
+        },
+        {
+            "Name": "bobkalonger.gigacoopnbarn_cleanCoop5",
+            "FromMapFile": "assets/cleanCoop5.tmx",
+            "When": {
+                "Coop Floor": "Clean"
+            }
+        },
+        {
+            "Name": "bobkalonger.gigacoopnbarn_cozyBarn5",
+            "FromMapFile": "assets/cozyBarn5.tmx",
+            "When": {
+                "Barn Floor": "Cozy"
+            }
+        },
+        {
+            "Name": "bobkalonger.gigacoopnbarn_cozyCoop5",
+            "FromMapFile": "assets/cozyCoop5.tmx",
+            "When": {
+                "Coop Floor": "Cozy"
+            }
+        }
+    ],
+
+    "Changes": [
+        
+        {
+            "LogName": "Paintable Giga Barn",
+            "Action": "EditData",
+            "Target": "Data/PaintData",
+            "Entries": {
+                "{{ModId}}_GigaBarn": "Building/-15 0/Roof/-10 5/Trim/-10 5"
+            }
+        },
+        {
+            "LogName": "Paintable Giga Coop",
+            "Action": "EditData",
+            "Target": "Data/PaintData",
+            "Entries": {
+                "{{ModId}}_GigaCoop": "Building/-25 0/Roof/-15 5/Trim/-25 0"
+            }
+        },
+        {
+            "LogName": "Create Giga Barn",
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "When": {
+                "Giga Barn Upgrade": "Mega"
+            },
+            "Entries": {
+                "{{ModId}}_GigaBarn": {
+                    "ID": "{{i18n: GigaBarnName}}",
+                    "Name": "{{i18n: GigaBarnName}}",
+                    "Description": "{{i18n: GigaBarnDescription}}",
+                    "Texture": "Buildings\\Deluxe Barn",
+                    "DrawShadow": true,
+                    "Size": {
+                        "X": 7,
+                        "Y": 4
+                    },
+                    "FadeWhenBehind": true,
+                    "SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 112,
+                        "Height": 112
+                    },
+                    "SeasonOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "Builder": "Robin",
+                    "BuildDays": 3,
+                    "BuildCost": 150000,
+                    "BuildMaterials": [
+                        {
+                            "ItemId": "(O)388",
+                            "Amount": 900
+                        },
+                        {
+                            "ItemId": "(O)390",
+                            "Amount": 700
+                        },
+                        {
+                            "ItemId": "(O)709",
+                            "Amount": 300
+                        }
+                    ],
+                    "BuildingToUpgrade": "jenf1.megacoopbarn_MegaBarn",
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 1,
+                        "Y": 3
+                    },
+                    "AnimalDoor": {
+                        "X": 4,
+                        "Y": 3,
+                        "Width": 2,
+                        "Height": 1
+                    },
+                    "AnimalDoorOpenDuration": 0.4,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.6,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+                    "IndoorMap": "bobkalonger.gigacoopnbarn_{{Barn Floor}}Barn5",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 40,
+                    "ValidOccupantTypes": [
+                        "Barn"
+                    ],
+                    "AllowAnimalPregnancy": true,
+                    "IndoorItemMoves": [
+                        {
+                            "Id": "MegaBarn_Feeder",
+                            "Source": {
+                                "X": 6,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 8,
+                                "Y": 3
+                            }
+                        }
+
+                    ],
+                    "AllowsFlooringUnderneath": true,
+                    "DrawLayers": [
+                        {
+                            "Id": "Default_AnimalDoor_Bottom",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 16
+                            },
+                            "DrawPosition": "64, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -19
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Top",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 12
+                            },
+                            "DrawPosition": "64, 84",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -19
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open_Top",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 32,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 16
+                            },
+                            "DrawPosition": "64, 80",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open_Bottom",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 64,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 16
+                            },
+                            "DrawPosition": "64, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Create Giga Coop",
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "When": {
+                "Giga Coop Upgrade": "Mega"
+            },
+            "Entries": {
+                "{{ModId}}_GigaCoop": {
+                    "ID": "{{i18n: GigaCoopName}}",
+                    "Name": "{{i18n: GigaCoopName}}",
+                    "Description": "{{i18n: GigaCoopDescription}}",
+                    "Texture": "Buildings\\Deluxe Coop",
+                    "DrawShadow": true,
+                    "Size": {
+                        "X": 6,
+                        "Y": 3
+                    },
+                    "FadeWhenBehind": true,
+                    "SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 96,
+                        "Height": 112
+                    },
+                    "SeasonOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "Builder": "Robin",
+                    "BuildDays": 3,
+                    "BuildCost": 120000,
+                    "BuildMaterials": [
+                        {
+                            "ItemId": "(O)388",
+                            "Amount": 800
+                        },
+                        {
+                            "ItemId": "(O)390",
+                            "Amount": 600
+                        },
+                        {
+                            "ItemId": "(O)709",
+                            "Amount": 200
+                        }
+                    ],
+                    "BuildingToUpgrade": "jenf1.megacoopbarn_MegaCoop",
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 1,
+                        "Y": 2
+                    },
+                    "AnimalDoor": {
+                        "X": 2,
+                        "Y": 2,
+                        "Width": 1,
+                        "Height": 1
+                    },
+                    "AnimalDoorOpenDuration": 0.3125,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.3125,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+                    "IndoorMap": "bobkalonger.gigacoopnbarn_{{Coop Floor}}Coop5",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 40,
+                    "ValidOccupantTypes": [
+                        "Coop"
+                    ],
+                    "AllowAnimalPregnancy": false,
+                    "IndoorItemMoves": [
+                        {
+                            "Id": "MegaCoop_Feeder",
+                            "Source": {
+                                "X": 3,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 6,
+                                "Y": 3
+                            }
+                        },
+                        {
+                            "Id": "MegaCoop_Incubator",
+                            "Source": {
+                                "X": 2,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 5,
+                                "Y": 3
+                            }
+                        },
+                        {
+                            "Id": "MegaCoop_Extra_Incubator",
+                            "Source": {
+                                "X": 31,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 29,
+                                "Y": 3
+                            }
+                        }
+                    ],
+                    "IndoorItems": [
+                        {
+                            "Id": "MegaCoop_Bonus_Incubator",
+                            "ItemId": "(BC)101",
+                            "Tile": {
+                                "X": 30,
+                                "Y": 3
+                            },
+                            "Indestructible": false
+                        }
+                    ],
+                    "AllowsFlooringUnderneath": true,
+                    "DrawLayers": [
+                        {
+                            "Id": "Default_AnimalDoor",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "DrawPosition": "32, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -13
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 16,
+                                "Y": 112,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "DrawPosition": "32, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Create Giga Barn",
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "When": {
+                "Giga Barn Upgrade": "Vanilla"
+            },
+            "Entries": {
+                "{{ModId}}_GigaBarn": {
+                    "ID": "{{i18n: GigaBarnName}}",
+                    "Name": "{{i18n: GigaBarnName}}",
+                    "Description": "{{i18n: GigaBarnDescription}}",
+                    "Texture": "Buildings\\Deluxe Barn",
+                    "DrawShadow": true,
+                    "Size": {
+                        "X": 7,
+                        "Y": 4
+                    },
+                    "FadeWhenBehind": true,
+                    "SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 112,
+                        "Height": 112
+                    },
+                    "SeasonOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "Builder": "Robin",
+                    "BuildDays": 3,
+                    "BuildCost": 150000,
+                    "BuildMaterials": [
+                        {
+                            "ItemId": "(O)388",
+                            "Amount": 900
+                        },
+                        {
+                            "ItemId": "(O)390",
+                            "Amount": 700
+                        },
+                        {
+                            "ItemId": "(O)709",
+                            "Amount": 300
+                        }
+                    ],
+                    "BuildingToUpgrade": "Deluxe Barn",
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 1,
+                        "Y": 3
+                    },
+                    "AnimalDoor": {
+                        "X": 4,
+                        "Y": 3,
+                        "Width": 2,
+                        "Height": 1
+                    },
+                    "AnimalDoorOpenDuration": 0.4,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.6,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+                    "IndoorMap": "bobkalonger.gigacoopnbarn_{{Barn Floor}}Barn5",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 40,
+                    "ValidOccupantTypes": [
+                        "Barn"
+                    ],
+                    "AllowAnimalPregnancy": true,
+                    "IndoorItemMoves": [
+                        {
+                            "Id": "VanillaBarn_Feeder",
+                            "Source": {
+                                "X": 6,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 8,
+                                "Y": 3
+                            }
+                        }
+
+                    ],
+                    "AllowsFlooringUnderneath": true,
+                    "DrawLayers": [
+                        {
+                            "Id": "Default_AnimalDoor_Bottom",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 16
+                            },
+                            "DrawPosition": "64, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -19
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Top",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 12
+                            },
+                            "DrawPosition": "64, 84",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -19
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open_Top",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 32,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 16
+                            },
+                            "DrawPosition": "64, 80",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open_Bottom",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 64,
+                                "Y": 112,
+                                "Width": 32,
+                                "Height": 16
+                            },
+                            "DrawPosition": "64, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Create Giga Coop",
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "When": {
+                "Giga Coop Upgrade": "Vanilla"
+            },
+            "Entries": {
+                "{{ModId}}_GigaCoop": {
+                    "ID": "{{i18n: GigaCoopName}}",
+                    "Name": "{{i18n: GigaCoopName}}",
+                    "Description": "{{i18n: GigaCoopDescription}}",
+                    "Texture": "Buildings\\Deluxe Coop",
+                    "DrawShadow": true,
+                    "Size": {
+                        "X": 6,
+                        "Y": 3
+                    },
+                    "FadeWhenBehind": true,
+                    "SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 96,
+                        "Height": 112
+                    },
+                    "SeasonOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "Builder": "Robin",
+                    "BuildDays": 3,
+                    "BuildCost": 120000,
+                    "BuildMaterials": [
+                        {
+                            "ItemId": "(O)388",
+                            "Amount": 800
+                        },
+                        {
+                            "ItemId": "(O)390",
+                            "Amount": 600
+                        },
+                        {
+                            "ItemId": "(O)709",
+                            "Amount": 200
+                        }
+                    ],
+                    "BuildingToUpgrade": "Deluxe Coop",
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 1,
+                        "Y": 2
+                    },
+                    "AnimalDoor": {
+                        "X": 2,
+                        "Y": 2,
+                        "Width": 1,
+                        "Height": 1
+                    },
+                    "AnimalDoorOpenDuration": 0.3125,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.3125,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+                    "IndoorMap": "bobkalonger.gigacoopnbarn_{{Coop Floor}}Coop5",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 40,
+                    "ValidOccupantTypes": [
+                        "Coop"
+                    ],
+                    "AllowAnimalPregnancy": false,
+                    "IndoorItemMoves": [
+                        {
+                            "Id": "VanillaCoop_Feeder",
+                            "Source": {
+                                "X": 3,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 6,
+                                "Y": 3
+                            }
+                        },
+                        {
+                            "Id": "VanillaCoop_Incubator",
+                            "Source": {
+                                "X": 2,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 5,
+                                "Y": 3
+                            }
+                        }
+                    ],
+                    "IndoorItems": [
+                        {
+                            "Id": "Third_Incubator",
+                            "ItemId": "(BC)101",
+                            "Tile": {
+                                "X": 30,
+                                "Y": 3
+                            },
+                            "Indestructible": false
+                        },
+                        {
+                            "Id": "Bonus_Incubator",
+                            "ItemId": "(BC)101",
+                            "Tile": {
+                                "X": 29,
+                                "Y": 3
+                            },
+                            "Indestructible": false
+                        }
+                    ],
+                    "AllowsFlooringUnderneath": true,
+                    "DrawLayers": [
+                        {
+                            "Id": "Default_AnimalDoor",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "DrawPosition": "32, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -13
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 16,
+                                "Y": 112,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "DrawPosition": "32, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Create Giga Coop",
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "When": {
+                "Giga Coop Upgrade": "Giant"
+            },
+            "Entries": {
+                "{{ModId}}_GigaCoop": {
+                    "ID": "{{i18n: GigaCoopName}}",
+                    "Name": "{{i18n: GigaCoopName}}",
+                    "Description": "{{i18n: GigaCoopDescription}}",
+                    "Texture": "Buildings\\Deluxe Coop",
+                    "DrawShadow": true,
+                    "Size": {
+                        "X": 6,
+                        "Y": 3
+                    },
+                    "FadeWhenBehind": true,
+                    "SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 96,
+                        "Height": 112
+                    },
+                    "SeasonOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "Builder": "Robin",
+                    "BuildDays": 3,
+                    "BuildCost": 120000,
+                    "BuildMaterials": [
+                        {
+                            "ItemId": "(O)388",
+                            "Amount": 800
+                        },
+                        {
+                            "ItemId": "(O)390",
+                            "Amount": 600
+                        },
+                        {
+                            "ItemId": "(O)709",
+                            "Amount": 200
+                        }
+                    ],
+                    "BuildingToUpgrade": "UncleArya.ResourceChickens.GiantCoop",
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 1,
+                        "Y": 2
+                    },
+                    "AnimalDoor": {
+                        "X": 2,
+                        "Y": 2,
+                        "Width": 1,
+                        "Height": 1
+                    },
+                    "AnimalDoorOpenDuration": 0.3125,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.3125,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+                    "IndoorMap": "bobkalonger.gigacoopnbarn_{{Coop Floor}}Coop5",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 40,
+                    "ValidOccupantTypes": [
+                        "Coop"
+                    ],
+                    "AllowAnimalPregnancy": false,
+                    "IndoorItemMoves": [
+                        {
+                            "Id": "GiantCoop_Feeder",
+                            "Source": {
+                                "X": 3,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 6,
+                                "Y": 3
+                            }
+                        },
+                        {
+                            "Id": "GiantCoop_Incubator",
+                            "Source": {
+                                "X": 2,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 5,
+                                "Y": 3
+                            }
+                        },
+                        {
+                            "Id": "GiantCoop_Extra_Incubator",
+                            "Source": {
+                                "X": 1,
+                                "Y": 11
+                            },
+                            "Destination": {
+                                "X": 29,
+                                "Y": 3
+                            }
+                        }
+                    ],
+                    "IndoorItems": [
+                        {
+                            "Id": "GiantCoop_Bonus_Incubator",
+                            "ItemId": "(BC)101",
+                            "Tile": {
+                                "X": 30,
+                                "Y": 3
+                            },
+                            "Indestructible": false
+                        }
+                    ],
+                    "AllowsFlooringUnderneath": true,
+                    "DrawLayers": [
+                        {
+                            "Id": "Default_AnimalDoor",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 0,
+                                "Y": 112,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "DrawPosition": "32, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 0.02,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -13
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open",
+                            "Texture": null,
+                            "SourceRect": {
+                                "X": 16,
+                                "Y": 112,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "DrawPosition": "32, 96",
+                            "DrawInBackground": false,
+                            "SortTileOffset": 1.0,
+                            "OnlyDrawIfChestHasContents": null,
+                            "FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+                            "AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
