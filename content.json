@@ -153,6 +153,21 @@
                     "AllowAnimalPregnancy": true,
                     "IndoorItemMoves": [
                         {
+                            "Id": "Old_Hay",
+                            "Source": {
+                                "X": 6,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 18,
+                                "Y": 3
+                            },
+                            "Size": {
+                                "X": 2,
+                                "Y": 1
+                            }
+                        },
+                        {
                             "Id": "MegaBarn_Feeder",
                             "Source": {
                                 "X": 6,
@@ -163,7 +178,6 @@
                                 "Y": 3
                             }
                         }
-
                     ],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
@@ -328,6 +342,21 @@
                     ],
                     "AllowAnimalPregnancy": false,
                     "IndoorItemMoves": [
+                        {
+                            "Id": "Old_Hay",
+                            "Source": {
+                                "X": 6,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 18,
+                                "Y": 3
+                            },
+                            "Size": {
+                                "X": 2,
+                                "Y": 1
+                            }
+                        },
                         {
                             "Id": "MegaCoop_Feeder",
                             "Source": {
@@ -495,6 +524,21 @@
                     "AllowAnimalPregnancy": true,
                     "IndoorItemMoves": [
                         {
+                            "Id": "Old_Hay",
+                            "Source": {
+                                "X": 8,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 20,
+                                "Y": 3
+                            },
+                            "Size": {
+                                "X": 2,
+                                "Y": 1
+                            }
+                        },
+                        {
                             "Id": "VanillaBarn_Feeder",
                             "Source": {
                                 "X": 6,
@@ -505,7 +549,6 @@
                                 "Y": 3
                             }
                         }
-
                     ],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
@@ -671,6 +714,21 @@
                     "AllowAnimalPregnancy": false,
                     "IndoorItemMoves": [
                         {
+                            "Id": "Old_Hay",
+                            "Source": {
+                                "X": 6,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 18,
+                                "Y": 3
+                            },
+                            "Size": {
+                                "X": 2,
+                                "Y": 1
+                            }
+                        },
+                        {
                             "Id": "VanillaCoop_Feeder",
                             "Source": {
                                 "X": 3,
@@ -834,6 +892,21 @@
                     ],
                     "AllowAnimalPregnancy": false,
                     "IndoorItemMoves": [
+                        {
+                            "Id": "Old_Hay",
+                            "Source": {
+                                "X": 6,
+                                "Y": 3
+                            },
+                            "Destination": {
+                                "X": 18,
+                                "Y": 3
+                            },
+                            "Size": {
+                                "X": 2,
+                                "Y": 1
+                            }
+                        },
                         {
                             "Id": "GiantCoop_Feeder",
                             "Source": {
