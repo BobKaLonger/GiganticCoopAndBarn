@@ -30,39 +30,27 @@
         }    
     },
 
-    "CustomLocations": [
-        {
-            "Name": "bobkalonger.gigacoopnbarn_cleanBarn5",
-            "FromMapFile": "assets/cleanBarn5.tmx",
-            "When": {
-                "Barn Floor": "Clean"
-            }
-        },
-        {
-            "Name": "bobkalonger.gigacoopnbarn_cleanCoop5",
-            "FromMapFile": "assets/cleanCoop5.tmx",
-            "When": {
-                "Coop Floor": "Clean"
-            }
-        },
-        {
-            "Name": "bobkalonger.gigacoopnbarn_cozyBarn5",
-            "FromMapFile": "assets/cozyBarn5.tmx",
-            "When": {
-                "Barn Floor": "Cozy"
-            }
-        },
-        {
-            "Name": "bobkalonger.gigacoopnbarn_cozyCoop5",
-            "FromMapFile": "assets/cozyCoop5.tmx",
-            "When": {
-                "Coop Floor": "Cozy"
-            }
-        }
-    ],
-
     "Changes": [
-        
+        {
+            "Action": "Load",
+            "Target": "Maps/gigacoopnbarn_cleanBarn5",
+            "FromFile": "assets/cleanBarn5.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/gigacoopnbarn_cleanCoop5",
+            "FromFile": "assets/cleanCoop5.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/gigacoopnbarn_cozyBarn5",
+            "FromFile": "assets/cozyBarn5.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/gigacoopnbarn_cozyCoop5",
+            "FromFile": "assets/cozyCoop5.tmx"
+        },
         {
             "LogName": "Paintable Giga Barn",
             "Action": "EditData",
@@ -151,34 +139,7 @@
                         "Barn"
                     ],
                     "AllowAnimalPregnancy": true,
-                    "IndoorItemMoves": [
-                        {
-                            "Id": "Old_Hay",
-                            "Source": {
-                                "X": 6,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 18,
-                                "Y": 3
-                            },
-                            "Size": {
-                                "X": 2,
-                                "Y": 1
-                            }
-                        },
-                        {
-                            "Id": "MegaBarn_Feeder",
-                            "Source": {
-                                "X": 6,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 8,
-                                "Y": 3
-                            }
-                        }
-                    ],
+                    "IndoorItemMoves": [],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
                         {
@@ -341,67 +302,8 @@
                         "Coop"
                     ],
                     "AllowAnimalPregnancy": false,
-                    "IndoorItemMoves": [
-                        {
-                            "Id": "Old_Hay",
-                            "Source": {
-                                "X": 6,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 18,
-                                "Y": 3
-                            },
-                            "Size": {
-                                "X": 2,
-                                "Y": 1
-                            }
-                        },
-                        {
-                            "Id": "MegaCoop_Feeder",
-                            "Source": {
-                                "X": 3,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 6,
-                                "Y": 3
-                            }
-                        },
-                        {
-                            "Id": "MegaCoop_Incubator",
-                            "Source": {
-                                "X": 2,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 5,
-                                "Y": 3
-                            }
-                        },
-                        {
-                            "Id": "MegaCoop_Extra_Incubator",
-                            "Source": {
-                                "X": 31,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 29,
-                                "Y": 3
-                            }
-                        }
-                    ],
-                    "IndoorItems": [
-                        {
-                            "Id": "MegaCoop_Bonus_Incubator",
-                            "ItemId": "(BC)101",
-                            "Tile": {
-                                "X": 30,
-                                "Y": 3
-                            },
-                            "Indestructible": false
-                        }
-                    ],
+                    "IndoorItemMoves": [],
+                    "IndoorItems": [],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
                         {
@@ -522,34 +424,7 @@
                         "Barn"
                     ],
                     "AllowAnimalPregnancy": true,
-                    "IndoorItemMoves": [
-                        {
-                            "Id": "Old_Hay",
-                            "Source": {
-                                "X": 8,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 20,
-                                "Y": 3
-                            },
-                            "Size": {
-                                "X": 2,
-                                "Y": 1
-                            }
-                        },
-                        {
-                            "Id": "VanillaBarn_Feeder",
-                            "Source": {
-                                "X": 6,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 8,
-                                "Y": 3
-                            }
-                        }
-                    ],
+                    "IndoorItemMoves": [],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
                         {
@@ -712,65 +587,8 @@
                         "Coop"
                     ],
                     "AllowAnimalPregnancy": false,
-                    "IndoorItemMoves": [
-                        {
-                            "Id": "Old_Hay",
-                            "Source": {
-                                "X": 6,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 18,
-                                "Y": 3
-                            },
-                            "Size": {
-                                "X": 2,
-                                "Y": 1
-                            }
-                        },
-                        {
-                            "Id": "VanillaCoop_Feeder",
-                            "Source": {
-                                "X": 3,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 6,
-                                "Y": 3
-                            }
-                        },
-                        {
-                            "Id": "VanillaCoop_Incubator",
-                            "Source": {
-                                "X": 2,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 5,
-                                "Y": 3
-                            }
-                        }
-                    ],
-                    "IndoorItems": [
-                        {
-                            "Id": "Third_Incubator",
-                            "ItemId": "(BC)101",
-                            "Tile": {
-                                "X": 30,
-                                "Y": 3
-                            },
-                            "Indestructible": false
-                        },
-                        {
-                            "Id": "Bonus_Incubator",
-                            "ItemId": "(BC)101",
-                            "Tile": {
-                                "X": 29,
-                                "Y": 3
-                            },
-                            "Indestructible": false
-                        }
-                    ],
+                    "IndoorItemMoves": [],
+                    "IndoorItems": [],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
                         {
@@ -891,67 +709,8 @@
                         "Coop"
                     ],
                     "AllowAnimalPregnancy": false,
-                    "IndoorItemMoves": [
-                        {
-                            "Id": "Old_Hay",
-                            "Source": {
-                                "X": 6,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 18,
-                                "Y": 3
-                            },
-                            "Size": {
-                                "X": 2,
-                                "Y": 1
-                            }
-                        },
-                        {
-                            "Id": "GiantCoop_Feeder",
-                            "Source": {
-                                "X": 3,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 6,
-                                "Y": 3
-                            }
-                        },
-                        {
-                            "Id": "GiantCoop_Incubator",
-                            "Source": {
-                                "X": 2,
-                                "Y": 3
-                            },
-                            "Destination": {
-                                "X": 5,
-                                "Y": 3
-                            }
-                        },
-                        {
-                            "Id": "GiantCoop_Extra_Incubator",
-                            "Source": {
-                                "X": 1,
-                                "Y": 11
-                            },
-                            "Destination": {
-                                "X": 29,
-                                "Y": 3
-                            }
-                        }
-                    ],
-                    "IndoorItems": [
-                        {
-                            "Id": "GiantCoop_Bonus_Incubator",
-                            "ItemId": "(BC)101",
-                            "Tile": {
-                                "X": 30,
-                                "Y": 3
-                            },
-                            "Indestructible": false
-                        }
-                    ],
+                    "IndoorItemMoves": [],
+                    "IndoorItems": [],
                     "AllowsFlooringUnderneath": true,
                     "DrawLayers": [
                         {
