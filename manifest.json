@@ -17,6 +17,11 @@
             "IsRequired": true
         },
         {
+            "UniqueID": "bobkalonger.UIH_util",
+            "MinimumVersion": "1.0.0",
+            "IsRequired": true
+        },
+        {
             "UniqueID": "jenf1.megacoopbarn",
             "MinimumVersion": "1.4.2",
             "IsRequired": false
