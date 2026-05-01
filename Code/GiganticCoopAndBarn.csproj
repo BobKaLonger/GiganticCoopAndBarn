@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>GiganticCoopAndBarn</AssemblyName>
+    <RootNamespace>GiganticCoopAndBarn</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+    <Platforms>AnyCPU</Platforms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <EnableHarmony>true</EnableHarmony>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableModDeploy>false</EnableModDeploy>
+  </PropertyGroup>
+  <Target Name="StageForTesting" AfterTargets="Build">
+    <PropertyGroup>
+      <StagingPath>/home/bobkalonger/StardewModding/Test Builds/$(AssemblyName)</StagingPath>
+    </PropertyGroup>
+    <MakeDir Directories="$(StagingPath)" />
+    <ItemGroup>
+      <StageFiles Include="$(TargetDir)$(AssemblyName).dll" />
+      <StageFiles Include="$(TargetDir)manifest.json" />
+      <StageFiles Include="$(TargetDir)i18n/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(StageFiles)" DestinationFiles="@(StageFiles->'$(StagingPath)/%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <Reference Include="ContentPatcher" HintPath="$(GameModsPath)/ContentPatcher/ContentPatcher.dll" Private="False" />
+    <Content Include="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

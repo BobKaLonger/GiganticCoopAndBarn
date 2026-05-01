@@ -1,8 +1,8 @@
 {
     "Name": "Gigantic Coop and Barn",
     "Author": "bobkalonger",
-    "Version": "1.1.6",
-    "UniqueID": "bobkalonger.gigacoopnbarn",
+    "Version": "1.2.0",
+    "UniqueID": "bobkalonger.GiganticCoopAndBarnCP",
     "MinimumApiVersion": "4.4.0",
     "Description": "Adds Giga Coop and Giga Barn upgrades, increasing maximum animal capacity to 40.",
     "UpdateKeys": [ "Nexus:33727" ],
@@ -14,6 +14,11 @@
         {
             "UniqueID": "Pathoschild.ContentPatcher",
             "MinimumVersion": "2.9.0",
+            "IsRequired": true
+        },
+        {
+            "UniqueID": "bobkalonger.GigaCB_code",
+            "MinimumVersion": "1.2.0",
             "IsRequired": true
         },
         {
