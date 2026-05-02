@@ -150,6 +150,10 @@ namespace GiganticCoopAndBarn
             );
 
             var foundHay = SpiralSearch(interior, "(O)178", startCenter, maxRadius: 50);
+
+            foreach (var (sourceTile, obj) in foundHay)
+                interior.removeObject(sourceTile, false);
+
             int haySlotIndex = 0;
             int haySlotX = haySlots[0].Left;
 
@@ -158,7 +162,6 @@ namespace GiganticCoopAndBarn
                 if (haySlotIndex >= haySlots.Count) break;
 
                 Vector2 dest = new Vector2(haySlotX, haySlots[haySlotIndex].Top);
-                interior.removeObject(sourceTile, false);
                 obj.TileLocation = dest;
                 interior.objects[dest] = obj;
 
@@ -228,6 +231,10 @@ namespace GiganticCoopAndBarn
             );
 
             var foundHay = SpiralSearch(interior, "(O)178", startCenter, maxRadius: 50);
+
+            foreach (var (sourceTile, obj) in foundHay)
+                interior.removeObject(sourceTile, false);
+            
             int haySlotIndex = 0;
             int haySlotX = haySlots[0].Left;
             
@@ -236,7 +243,6 @@ namespace GiganticCoopAndBarn
                 if (haySlotIndex >= haySlots.Count) break;
 
                 Vector2 dest = new Vector2(haySlotX, haySlots[haySlotIndex].Top);
-                interior.removeObject(sourceTile, false);
                 obj.TileLocation = dest;
                 interior.objects[dest] = obj;
 
