@@ -1,7 +1,7 @@
 {
     "Name": "Gigantic Coop and Barn",
     "Author": "bobkalonger",
-    "Version": "1.2.3",
+    "Version": "1.2.4",
     "Description": "Code for Gigantic Coop and Barn",
     "UniqueID": "bobkalonger.GigaCB_code",
     "EntryDll": "GiganticCoopAndBarn.dll",
