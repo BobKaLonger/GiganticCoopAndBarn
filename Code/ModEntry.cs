@@ -397,6 +397,7 @@ namespace GiganticCoopAndBarn
 
                 void DoItemMoves(object? sender, UpdateTickedEventArgs e)
                 {
+                    if (!e.IsMultipleOf(3)) return;
                     modInstance!.Helper.Events.GameLoop.UpdateTicked -= DoItemMoves;
 
                     GameLocation interior = __instance.GetIndoors();

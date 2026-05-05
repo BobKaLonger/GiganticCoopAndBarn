@@ -1,7 +1,7 @@
 {
     "Name": "Gigantic Coop and Barn",
     "Author": "bobkalonger",
-    "Version": "1.2.4",
+    "Version": "1.2.5",
     "UniqueID": "bobkalonger.gigacoopnbarn",
     "MinimumApiVersion": "4.4.0",
     "Description": "Adds Giga Coop and Giga Barn upgrades, increasing maximum animal capacity to 40.",
@@ -18,12 +18,12 @@
         },
         {
             "UniqueID": "bobkalonger.GigaCB_code",
-            "MinimumVersion": "1.2.4",
+            "MinimumVersion": "1.2.5",
             "IsRequired": true
         },
         {
-            "UniqueID": "bobkalonger.UIH_util",
-            "MinimumVersion": "1.0.0",
+            "UniqueID": "bobkalonger.UnlimitedIncubatorHatches",
+            "MinimumVersion": "1.0.1",
             "IsRequired": true
         },
         {
