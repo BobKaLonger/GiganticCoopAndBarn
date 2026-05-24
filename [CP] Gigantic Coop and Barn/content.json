@@ -1,8 +1,6 @@
 {
     "Format": "2.9.0",
-    
     "ConfigSchema": {
-
         "Giga Barn Upgrade": {
             "AllowValues": "Mega, Vanilla",
             "Description": "Choose which barn to upgrade.",
@@ -15,7 +13,6 @@
             "Default": "Mega",
             "Section": "Upgrade Path"
         },
-
         "Barn Floor": {
             "AllowValues": "Clean, Cozy",
             "Description": "Choose the flooring for your barn.",
@@ -27,9 +24,8 @@
             "Description": "Choose the flooring for your coop.",
             "Default": "Clean",
             "Section": "Flooring Options"
-        }    
+        }
     },
-
     "CustomLocations": [
         {
             "Name": "bobkalonger.gigacoopnbarn_cleanBarn5",
@@ -60,7 +56,6 @@
             }
         }
     ],
-
     "Changes": [
         {
             "LogName": "Paintable Giga Barn",
@@ -87,7 +82,6 @@
             },
             "Entries": {
                 "{{ModId}}_GigaBarn": {
-                    "ID": "{{i18n: GigaBarnName}}",
                     "Name": "{{i18n: GigaBarnName}}",
                     "Description": "{{i18n: GigaBarnDescription}}",
                     "Texture": "Buildings\\Deluxe Barn",
@@ -250,7 +244,6 @@
             },
             "Entries": {
                 "{{ModId}}_GigaCoop": {
-                    "ID": "{{i18n: GigaCoopName}}",
                     "Name": "{{i18n: GigaCoopName}}",
                     "Description": "{{i18n: GigaCoopDescription}}",
                     "Texture": "Buildings\\Deluxe Coop",
@@ -372,7 +365,6 @@
             },
             "Entries": {
                 "{{ModId}}_GigaBarn": {
-                    "ID": "{{i18n: GigaBarnName}}",
                     "Name": "{{i18n: GigaBarnName}}",
                     "Description": "{{i18n: GigaBarnDescription}}",
                     "Texture": "Buildings\\Deluxe Barn",
@@ -535,7 +527,6 @@
             },
             "Entries": {
                 "{{ModId}}_GigaCoop": {
-                    "ID": "{{i18n: GigaCoopName}}",
                     "Name": "{{i18n: GigaCoopName}}",
                     "Description": "{{i18n: GigaCoopDescription}}",
                     "Texture": "Buildings\\Deluxe Coop",
@@ -657,7 +648,6 @@
             },
             "Entries": {
                 "{{ModId}}_GigaCoop": {
-                    "ID": "{{i18n: GigaCoopName}}",
                     "Name": "{{i18n: GigaCoopName}}",
                     "Description": "{{i18n: GigaCoopDescription}}",
                     "Texture": "Buildings\\Deluxe Coop",
