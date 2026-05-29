@@ -1,8 +1,8 @@
 {
-  "GigaCoopName": "Giga Poulailler",
-  "GigaCoopDescription": "Peut accueillir jusqu’à 40 animaux de poulailler.",
-  "GigaBarnName": "Giga Étable",
-  "GigaBarnDescription": "Peut accueillir jusqu’à 40 animaux d’étable.",
+  "building.giga-coop.name": "Giga Poulailler",
+  "building.giga-coop.description": "Peut accueillir jusqu’à 40 animaux de poulailler.",
+  "building.giga-barn.name": "Giga Étable",
+  "building.giga-barn.description": "Peut accueillir jusqu’à 40 animaux d’étable.",
   "config.gigaCoopUpgrade.name": "Amélioration du Giga Poulailler",
   "config.gigaBarnUpgrade.name": "Amélioration de la Giga Étable",
   "config.gigaCoopUpgrade.description": "Choisis quel poulailler améliorer.",

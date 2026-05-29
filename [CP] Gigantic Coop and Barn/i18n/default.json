@@ -1,8 +1,8 @@
 {
-    "GigaCoopName": "Giga Coop",
-    "GigaCoopDescription": "Houses 40 coop-dwelling animals.",
-    "GigaBarnName": "Giga Barn",
-    "GigaBarnDescription": "Houses 40 barn-dwelling animals.",
+    "building.giga-coop.name": "Giga Coop",
+    "building.giga-coop.description": "Houses 40 coop-dwelling animals.",
+    "building.giga-barn.name": "Giga Barn",
+    "building.giga-barn.description": "Houses 40 barn-dwelling animals.",
     "config.gigaCoopUpgrade.name": "Giga Coop Upgrade",
     "config.gigaBarnUpgrade.name": "Giga Barn Upgrade",
     "config.gigaCoopUpgrade.description": "Choose which coop to upgrade.",
@@ -24,4 +24,4 @@
     "config.coopFloor.values.Cozy": "Cozy",
     "config.section.flooringOptions": "Flooring Options",
     "config.section.flooringOptions.description": "Select the floor appearance for your coop and barn."
-    }
+}

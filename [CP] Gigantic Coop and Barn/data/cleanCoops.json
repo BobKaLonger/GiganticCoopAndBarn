@@ -8,8 +8,8 @@
             },
             "Entries": {
                 "{{ModId}}_GigaCoop": {
-                    "Name": "{{i18n: GigaCoopName}}",
-                    "Description": "{{i18n: GigaCoopDescription}}",
+                    "Name": "{{i18n:building.giga-coop.name}}",
+                    "Description": "{{i18n:building.giga-coop.description}}",
                     "Texture": "Buildings\\Deluxe Coop",
                     "DrawShadow": true,
                     "Size": {
@@ -128,8 +128,8 @@
             },
             "Entries": {
                 "{{ModId}}_GigaCoop": {
-                    "Name": "{{i18n: GigaCoopName}}",
-                    "Description": "{{i18n: GigaCoopDescription}}",
+                    "Name": "{{i18n:building.giga-coop.name}}",
+                    "Description": "{{i18n:building.giga-coop.description}}",
                     "Texture": "Buildings\\Deluxe Coop",
                     "DrawShadow": true,
                     "Size": {
@@ -248,8 +248,8 @@
             },
             "Entries": {
                 "{{ModId}}_GigaCoop": {
-                    "Name": "{{i18n: GigaCoopName}}",
-                    "Description": "{{i18n: GigaCoopDescription}}",
+                    "Name": "{{i18n:building.giga-coop.name}}",
+                    "Description": "{{i18n:building.giga-coop.description}}",
                     "Texture": "Buildings\\Deluxe Coop",
                     "DrawShadow": true,
                     "Size": {

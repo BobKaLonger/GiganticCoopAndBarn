@@ -8,8 +8,8 @@
             },
             "Entries": {
                 "{{ModId}}_GigaBarn": {
-                    "Name": "{{i18n: GigaBarnName}}",
-                    "Description": "{{i18n: GigaBarnDescription}}",
+                    "Name": "{{i18n:building.giga-barn.name}}",
+                    "Description": "{{i18n:building.giga-barn.description}}",
                     "Texture": "Buildings\\Deluxe Barn",
                     "DrawShadow": true,
                     "Size": {
@@ -169,8 +169,8 @@
             },
             "Entries": {
                 "{{ModId}}_GigaBarn": {
-                    "Name": "{{i18n: GigaBarnName}}",
-                    "Description": "{{i18n: GigaBarnDescription}}",
+                    "Name": "{{i18n:building.giga-barn.name}}",
+                    "Description": "{{i18n:building.giga-barn.description}}",
                     "Texture": "Buildings\\Deluxe Barn",
                     "DrawShadow": true,
                     "Size": {
