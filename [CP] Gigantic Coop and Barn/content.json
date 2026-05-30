@@ -91,14 +91,14 @@
             "Action": "Include",
             "FromFile": "data/cleanCoops.json",
             "When": {
-                "Barn Floor": "Clean"
+                "Coop Floor": "Clean"
             }
         },
         {
             "Action": "Include",
-            "FromFile": "data/cozyBarns.json",
+            "FromFile": "data/cozyCoops.json",
             "When": {
-                "Barn Floor": "Cozy"
+                "Coop Floor": "Cozy"
             }
         }
     ]
