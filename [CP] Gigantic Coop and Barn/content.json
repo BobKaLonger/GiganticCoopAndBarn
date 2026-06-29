@@ -2,13 +2,13 @@
     "Format": "2.9.0",
     "ConfigSchema": {
         "Giga Barn Upgrade": {
-            "AllowValues": "Mega, Vanilla",
+            "AllowValues": "Mega, More Upgrades, Vanilla",
             "Description": "Choose which barn to upgrade.",
             "Default": "Mega",
             "Section": "Upgrade Path"
         },
         "Giga Coop Upgrade": {
-            "AllowValues": "Giant, Mega, Vanilla",
+            "AllowValues": "Giant, Mega, More Upgrades, Vanilla",
             "Description": "Choose which coop to upgrade.",
             "Default": "Mega",
             "Section": "Upgrade Path"
