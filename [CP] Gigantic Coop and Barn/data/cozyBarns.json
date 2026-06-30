@@ -332,7 +332,7 @@
                 "{{ModId}}_GigaBarn": {
                     "Name": "{{i18n:building.giga-barn.name}}",
                     "Description": "{{i18n:building.giga-barn.description}}",
-                    "Texture": "Buildings\\Deluxe Barn",
+                    "Texture": "Amichwan.More.upgrades/PremiumBarn",
                     "DrawShadow": true,
                     "Size": {
                         "X": 7,

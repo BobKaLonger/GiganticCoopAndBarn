@@ -370,7 +370,7 @@
                 "{{ModId}}_GigaCoop": {
                     "Name": "{{i18n:building.giga-coop.name}}",
                     "Description": "{{i18n:building.giga-coop.description}}",
-                    "Texture": "Buildings\\Deluxe Coop",
+                    "Texture": "Amichwan.More.upgrades/PremiumCoop",
                     "DrawShadow": true,
                     "Size": {
                         "X": 6,
