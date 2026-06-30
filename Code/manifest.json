@@ -1,12 +1,14 @@
 {
     "Name": "Gigantic Coop and Barn",
     "Author": "bobkalonger",
-    "Version": "1.2.5",
+    "Version": "1.2.6",
     "Description": "Code for Gigantic Coop and Barn",
     "UniqueID": "bobkalonger.GigaCB_code",
     "EntryDll": "GiganticCoopAndBarn.dll",
     "MinimumApiVersion": "4.4.0",
-    "UpdateKeys": [ "Nexus:-1" ],
+    "UpdateKeys": [
+        "Nexus:33727"
+    ],
     "Dependencies": [
         {
             "UniqueID": "Pathoschild.ContentPatcher",

@@ -67,7 +67,7 @@ namespace GiganticCoopAndBarn
             {
                 if (building.buildingType.Value is not (GigaBarn or GigaCoop))
                     continue;
-                
+
                 var interior = building.GetIndoors();
 
                 if (building.daysUntilUpgrade.Value > 0 || interior == null) continue;
@@ -82,7 +82,7 @@ namespace GiganticCoopAndBarn
                         BarnItemMoves(interior);
                     else if (building.buildingType.Value is GigaCoop)
                         CoopItemMoves(interior);
-                    
+
                     building.modData[upgradeKey] = currentLevel;
                 }
             }
@@ -100,8 +100,8 @@ namespace GiganticCoopAndBarn
                     {
                         if (Math.Abs(dx) != radius && Math.Abs(dy) != radius)
                             continue;
-                        
-                        Vector2 tile = new Vector2(center.X + dx, center.Y +dy);
+
+                        Vector2 tile = new Vector2(center.X + dx, center.Y + dy);
                         if (location.objects.TryGetValue(tile, out StardewValley.Object obj) && obj.QualifiedItemId == qualifiedID)
                         {
                             results.Add((tile, obj));
@@ -135,7 +135,8 @@ namespace GiganticCoopAndBarn
 
             var namedDestinations = new Dictionary<string, Vector2>
             {
-                { "(BC)99",  new Vector2(8, 3) },
+                { "(BC)99",  new Vector2(8,  3) },
+                { "(BC)272", new Vector2(31, 3) }
             };
 
             var haySlots = new List<Rectangle>
@@ -216,7 +217,8 @@ namespace GiganticCoopAndBarn
 
             var namedDestinations = new Dictionary<string, Vector2>
             {
-                { "(BC)99", new Vector2(6, 3) }
+                { "(BC)99",  new Vector2(6,  3) },
+                { "(BC)272", new Vector2(33, 3) }
             };
 
             var haySlots = new List<Rectangle>
@@ -234,10 +236,10 @@ namespace GiganticCoopAndBarn
 
             foreach (var (sourceTile, obj) in foundHay)
                 interior.removeObject(sourceTile, false);
-            
+
             int haySlotIndex = 0;
             int haySlotX = haySlots[0].Left;
-            
+
             foreach (var (sourceTile, obj) in foundHay)
             {
                 if (haySlotIndex >= haySlots.Count) break;
@@ -384,7 +386,7 @@ namespace GiganticCoopAndBarn
             {
                 if (__instance.buildingType.Value is not (GigaBarn or GigaCoop))
                     return;
-                
+
 
                 string upgradeKey = $"{modInstance!.ModManifest.UniqueID}/buildingKey";
                 string currentLevel = __instance.buildingType.Value;
@@ -409,7 +411,7 @@ namespace GiganticCoopAndBarn
                     else if (__instance.buildingType.Value is GigaCoop)
                         CoopItemMoves(interior);
 
-                    
+
                     if (interior is AnimalHouse animalHouse)
                         modInstance!.MakeIncubatorsMoveable(animalHouse);
 
@@ -443,7 +445,7 @@ namespace GiganticCoopAndBarn
             {
                 if (__result == null)
                     return;
-                
+
                 if (__instance.upgradeName.Value is not (GigaBarn or GigaCoop))
                     return;
 
